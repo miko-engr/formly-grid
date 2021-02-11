@@ -13,45 +13,54 @@ export class AppComponent {
   model: any = {
     investments: [
       {
-        investmentName: "project1",
-        investmentDate: "2021-02-01",
-        stockIdentifier: 1,
+        vin: "VIN1",
+        year: "2021-02-01",
+        make: "make1",
+        bodyStyle: "bodyStyle1"
       },
       {
-        investmentName: "project2",
-        investmentDate: "2021-02-02",
-        stockIdentifier: 2,
+        vin: "VIN2",
+        year: "2021-02-02",
+        make: "make2",
+        bodyStyle: "bodyStyle2"
       },
       {
-        investmentName: "project3",
-        investmentDate: "2021-02-03",
-        stockIdentifier: 3,
+        vin: "VIN3",
+        year: "2021-02-03",
+        make: "make3",
+        bodyStyle: "bodyStyle3"
       },
       {
-        investmentName: "project4",
-        investmentDate: "2021-02-04",
-        stockIdentifier: 4,
+        vin: "VIN4",
+        year: "2021-02-04",
+        make: "make4",
+        bodyStyle: "bodyStyle4"
       },
       {
-        investmentName: "project5",
-        investmentDate: "2021-02-05",
-        stockIdentifier: 5,
+        vin: "VIN5",
+        year: "2021-02-05",
+        make: "make5",
+        bodyStyle: "bodyStyle5"
       },
       {
-        investmentName: "project6",
-        investmentDate: "2021-02-06",
-        stockIdentifier: 6,
+        vin: "VIN6",
+        year: "2021-02-06",
+        make: "make6",
+        bodyStyle: "bodyStyle6"
       },
       {
-        investmentName: "project7",
-        investmentDate: "2021-02-07",
-        stockIdentifier: 7,
+        vin: "VIN7",
+        year: "2021-02-07",
+        make: "make7",
+        bodyStyle: "bodyStyle7"
       },
       {
-        investmentName: "project8",
-        investmentDate: "2021-02-08",
-        stockIdentifier: 8,
+        vin: "VIN8",
+        year: "2021-02-08",
+        make: "make8",
+        bodyStyle: "bodyStyle8"
       },
+      
     ],
   };
 
@@ -60,7 +69,7 @@ export class AppComponent {
   fields: FormlyFieldConfig[] = [
     {
       className: "section-label",
-      template: "<h5>Personal data</h5>",
+      template: "<h4>Can you tell us which vehicle you're insuring?</h4>",
     },
     {
       key: "investments",
@@ -72,20 +81,25 @@ export class AppComponent {
           rowHeight: 42,
           columnDefs: [
             {
-              headerName: "Name of Investment",
-              field: "investmentName",
+              headerName: "VIN",
+              field: "vin",
               sortable: true,
-              width: 350,
+              width: 250,
             },
             {
-              headerName: "Date of Investment",
-              field: "investmentDate",
+              headerName: "Year",
+              field: "year",
               sortable: true,
-              width: 350,
+              width: 250,
             },
             {
-              headerName: "Stock Identifier",
-              field: "stockIdentifier",
+              headerName: "Make",
+              field: "make",
+              width: 250,
+            },
+            {
+              headerName: "Body Style",
+              field: "bodyStyle",
               // width: 330,
             },
           ],
@@ -95,21 +109,26 @@ export class AppComponent {
         fieldGroup: [
           {
             type: "input",
-            key: "investmentName",
+            key: "vin",
             templateOptions: {
               required: true,
             },
           },
           {
             type: "input",
-            key: "investmentDate",
+            key: "year",
             templateOptions: {
               type: "date",
             },
           },
           {
             type: "input",
-            key: "stockIdentifier",
+            key: "make",
+            templateOptions: {},
+          },
+          {
+            type: "input",
+            key: "bodyStyle",
             templateOptions: {},
           },
         ],
