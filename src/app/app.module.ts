@@ -8,14 +8,14 @@ import { FormlyModule } from "@ngx-formly/core";
 import { FormlyBootstrapModule } from "@ngx-formly/bootstrap";
 
 import { GridTypeComponent } from "./grid.type";
-// import { GridFormlyCellComponent } from "./grid-formly-cell.component";
+import { GridFormlyCellComponent } from "./grid-formly-cell.component";
 
 import { AgGridModule } from "ag-grid-angular";
 @NgModule({
-  declarations: [AppComponent, GridTypeComponent],
+  declarations: [AppComponent, GridTypeComponent, GridFormlyCellComponent],
   imports: [
     BrowserModule,
-    AgGridModule.withComponents([]),
+    AgGridModule.withComponents([GridFormlyCellComponent]),
     ReactiveFormsModule,
     FormlyModule.forRoot({
       types: [

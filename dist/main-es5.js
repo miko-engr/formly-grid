@@ -97,43 +97,51 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.form = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroup"]({});
         this.model = {
           investments: [{
-            investmentName: "project1",
-            investmentDate: "2021-02-01",
-            stockIdentifier: 1
+            vin: "VIN1",
+            year: "2021-02-01",
+            make: "make1",
+            bodyStyle: "bodyStyle1"
           }, {
-            investmentName: "project2",
-            investmentDate: "2021-02-02",
-            stockIdentifier: 2
+            vin: "VIN2",
+            year: "2021-02-02",
+            make: "make2",
+            bodyStyle: "bodyStyle2"
           }, {
-            investmentName: "project3",
-            investmentDate: "2021-02-03",
-            stockIdentifier: 3
+            vin: "VIN3",
+            year: "2021-02-03",
+            make: "make3",
+            bodyStyle: "bodyStyle3"
           }, {
-            investmentName: "project4",
-            investmentDate: "2021-02-04",
-            stockIdentifier: 4
+            vin: "VIN4",
+            year: "2021-02-04",
+            make: "make4",
+            bodyStyle: "bodyStyle4"
           }, {
-            investmentName: "project5",
-            investmentDate: "2021-02-05",
-            stockIdentifier: 5
+            vin: "VIN5",
+            year: "2021-02-05",
+            make: "make5",
+            bodyStyle: "bodyStyle5"
           }, {
-            investmentName: "project6",
-            investmentDate: "2021-02-06",
-            stockIdentifier: 6
+            vin: "VIN6",
+            year: "2021-02-06",
+            make: "make6",
+            bodyStyle: "bodyStyle6"
           }, {
-            investmentName: "project7",
-            investmentDate: "2021-02-07",
-            stockIdentifier: 7
+            vin: "VIN7",
+            year: "2021-02-07",
+            make: "make7",
+            bodyStyle: "bodyStyle7"
           }, {
-            investmentName: "project8",
-            investmentDate: "2021-02-08",
-            stockIdentifier: 8
+            vin: "VIN8",
+            year: "2021-02-08",
+            make: "make8",
+            bodyStyle: "bodyStyle8"
           }]
         };
         this.options = {};
         this.fields = [{
           className: "section-label",
-          template: "<h5>Personal data</h5>"
+          template: "<h4>Can you tell us which vehicle you're insuring?</h4>"
         }, {
           key: "investments",
           type: "grid",
@@ -143,37 +151,45 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             gridOptions: {
               rowHeight: 42,
               columnDefs: [{
-                headerName: "Name of Investment",
-                field: "investmentName",
+                headerName: "VIN",
+                field: "vin",
                 sortable: true,
-                width: 350
+                width: 250
               }, {
-                headerName: "Date of Investment",
-                field: "investmentDate",
+                headerName: "Year",
+                field: "year",
                 sortable: true,
-                width: 350
+                width: 250
               }, {
-                headerName: "Stock Identifier",
-                field: "stockIdentifier"
+                headerName: "Make",
+                field: "make",
+                width: 250
+              }, {
+                headerName: "Body Style",
+                field: "bodyStyle"
               }]
             }
           },
           fieldArray: {
             fieldGroup: [{
               type: "input",
-              key: "investmentName",
+              key: "vin",
               templateOptions: {
                 required: true
               }
             }, {
               type: "input",
-              key: "investmentDate",
+              key: "year",
               templateOptions: {
                 type: "date"
               }
             }, {
               type: "input",
-              key: "stockIdentifier",
+              key: "make",
+              templateOptions: {}
+            }, {
+              type: "input",
+              key: "bodyStyle",
               templateOptions: {}
             }]
           }
@@ -314,10 +330,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var ag_grid_angular__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    var _grid_formly_cell_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! ./grid-formly-cell.component */
+    "./src/app/grid-formly-cell.component.ts");
+    /* harmony import */
+
+
+    var ag_grid_angular__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
     /*! ag-grid-angular */
     "./node_modules/ag-grid-angular/__ivy_ngcc__/fesm2015/ag-grid-angular.js"); // import { AgGridModule } from "ag-grid-angular";
-    // import { GridFormlyCellComponent } from "./grid-formly-cell.component";
 
 
     var AppModule = function AppModule() {
@@ -333,7 +354,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         return new (t || AppModule)();
       },
       providers: [],
-      imports: [[_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], ag_grid_angular__WEBPACK_IMPORTED_MODULE_7__["AgGridModule"].withComponents([]), _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"], _ngx_formly_core__WEBPACK_IMPORTED_MODULE_4__["FormlyModule"].forRoot({
+      imports: [[_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], ag_grid_angular__WEBPACK_IMPORTED_MODULE_8__["AgGridModule"].withComponents([_grid_formly_cell_component__WEBPACK_IMPORTED_MODULE_7__["GridFormlyCellComponent"]]), _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"], _ngx_formly_core__WEBPACK_IMPORTED_MODULE_4__["FormlyModule"].forRoot({
         types: [{
           name: "grid",
           component: _grid_type__WEBPACK_IMPORTED_MODULE_6__["GridTypeComponent"],
@@ -349,8 +370,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     (function () {
       (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, {
-        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"], _grid_type__WEBPACK_IMPORTED_MODULE_6__["GridTypeComponent"]],
-        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], ag_grid_angular__WEBPACK_IMPORTED_MODULE_7__["AgGridModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"], _ngx_formly_core__WEBPACK_IMPORTED_MODULE_4__["FormlyModule"], _ngx_formly_bootstrap__WEBPACK_IMPORTED_MODULE_5__["FormlyBootstrapModule"]]
+        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"], _grid_type__WEBPACK_IMPORTED_MODULE_6__["GridTypeComponent"], _grid_formly_cell_component__WEBPACK_IMPORTED_MODULE_7__["GridFormlyCellComponent"]],
+        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], ag_grid_angular__WEBPACK_IMPORTED_MODULE_8__["AgGridModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"], _ngx_formly_core__WEBPACK_IMPORTED_MODULE_4__["FormlyModule"], _ngx_formly_bootstrap__WEBPACK_IMPORTED_MODULE_5__["FormlyBootstrapModule"]]
       });
     })();
     /*@__PURE__*/
@@ -360,8 +381,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AppModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
         args: [{
-          declarations: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"], _grid_type__WEBPACK_IMPORTED_MODULE_6__["GridTypeComponent"]],
-          imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], ag_grid_angular__WEBPACK_IMPORTED_MODULE_7__["AgGridModule"].withComponents([]), _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"], _ngx_formly_core__WEBPACK_IMPORTED_MODULE_4__["FormlyModule"].forRoot({
+          declarations: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"], _grid_type__WEBPACK_IMPORTED_MODULE_6__["GridTypeComponent"], _grid_formly_cell_component__WEBPACK_IMPORTED_MODULE_7__["GridFormlyCellComponent"]],
+          imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], ag_grid_angular__WEBPACK_IMPORTED_MODULE_8__["AgGridModule"].withComponents([_grid_formly_cell_component__WEBPACK_IMPORTED_MODULE_7__["GridFormlyCellComponent"]]), _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"], _ngx_formly_core__WEBPACK_IMPORTED_MODULE_4__["FormlyModule"].forRoot({
             types: [{
               name: "grid",
               component: _grid_type__WEBPACK_IMPORTED_MODULE_6__["GridTypeComponent"],
@@ -375,6 +396,107 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           }), _ngx_formly_bootstrap__WEBPACK_IMPORTED_MODULE_5__["FormlyBootstrapModule"]],
           providers: [],
           bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]]
+        }]
+      }], null, null);
+    })();
+    /***/
+
+  },
+
+  /***/
+  "./src/app/grid-formly-cell.component.ts":
+  /*!***********************************************!*\
+    !*** ./src/app/grid-formly-cell.component.ts ***!
+    \***********************************************/
+
+  /*! exports provided: GridFormlyCellComponent */
+
+  /***/
+  function srcAppGridFormlyCellComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "GridFormlyCellComponent", function () {
+      return GridFormlyCellComponent;
+    });
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _ngx_formly_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @ngx-formly/core */
+    "./node_modules/@ngx-formly/core/__ivy_ngcc__/fesm2015/ngx-formly-core.js");
+
+    var GridFormlyCellComponent =
+    /*#__PURE__*/
+    function () {
+      function GridFormlyCellComponent() {
+        _classCallCheck(this, GridFormlyCellComponent);
+      }
+
+      _createClass(GridFormlyCellComponent, [{
+        key: "agInit",
+        value: function agInit(params) {
+          this.params = params;
+        }
+      }, {
+        key: "refresh",
+        value: function refresh() {
+          return false;
+        }
+      }, {
+        key: "getField",
+        value: function getField() {
+          var rowIndex = this.params.rowIndex;
+          var prop = this.params.colDef.field;
+          var fg = this.params.context.parentField.fieldGroup;
+          return fg[rowIndex].fieldGroup.find(function (f) {
+            return f.key === prop;
+          });
+        }
+      }]);
+
+      return GridFormlyCellComponent;
+    }();
+
+    GridFormlyCellComponent.ɵfac = function GridFormlyCellComponent_Factory(t) {
+      return new (t || GridFormlyCellComponent)();
+    };
+
+    GridFormlyCellComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+      type: GridFormlyCellComponent,
+      selectors: [["formly-ag-grid-cell"]],
+      decls: 1,
+      vars: 1,
+      consts: [[3, "field"]],
+      template: function GridFormlyCellComponent_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "formly-field", 0);
+        }
+
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("field", ctx.getField());
+        }
+      },
+      directives: [_ngx_formly_core__WEBPACK_IMPORTED_MODULE_1__["FormlyField"]],
+      encapsulation: 2
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](GridFormlyCellComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+          selector: "formly-ag-grid-cell",
+          template: "<formly-field [field]=\"getField()\"></formly-field>"
         }]
       }], null, null);
     })();
@@ -416,17 +538,23 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    var _grid_formly_cell_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! ./grid-formly-cell.component */
+    "./src/app/grid-formly-cell.component.ts");
+    /* harmony import */
+
+
+    var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @angular/common */
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
     /* harmony import */
 
 
-    var ag_grid_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var ag_grid_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! ag-grid-angular */
     "./node_modules/ag-grid-angular/__ivy_ngcc__/fesm2015/ag-grid-angular.js");
 
-    var _c0 = ["agGrid"]; // import { GridFormlyCellComponent } from './grid-formly-cell.component';
+    var _c0 = ["agGrid"];
 
     var GridTypeComponent =
     /*#__PURE__*/
@@ -452,8 +580,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             width: this.to.width,
             height: this.to.height
           }; // map cell Renderer to Formly Component
-          // this.to.gridOptions.columnDefs.forEach(column => column.cellRendererFramework = GridFormlyCellComponent);
-          // set grid options and context of the parent formly field
+
+          this.to.gridOptions.columnDefs.forEach(function (column) {
+            return column.cellRendererFramework = _grid_formly_cell_component__WEBPACK_IMPORTED_MODULE_2__["GridFormlyCellComponent"];
+          }); // set grid options and context of the parent formly field
 
           var gridOptions = this.to.gridOptions || {};
           gridOptions.context = {
@@ -516,7 +646,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("gridOptions", ctx.gridOptions)("rowData", ctx.model);
         }
       },
-      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgStyle"], ag_grid_angular__WEBPACK_IMPORTED_MODULE_3__["AgGridAngular"]],
+      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgStyle"], ag_grid_angular__WEBPACK_IMPORTED_MODULE_4__["AgGridAngular"]],
       encapsulation: 2
     });
 
