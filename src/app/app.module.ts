@@ -25,7 +25,7 @@ import { AgGridModule } from "ag-grid-angular";
           defaultOptions: {
             templateOptions: {
               width: "100%",
-              height: "400px",
+              height: "800px",
             },
           },
         },
