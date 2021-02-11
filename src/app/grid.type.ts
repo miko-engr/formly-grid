@@ -1,10 +1,10 @@
-import { Component, ViewChild, TemplateRef, OnInit } from "@angular/core";
-import { FieldArrayType } from "@ngx-formly/core";
-import { GridOptions } from "ag-grid-community";
-import { GridFormlyCellComponent } from "./grid-formly-cell.component";
+import { Component, ViewChild, TemplateRef, OnInit } from '@angular/core';
+import { FieldArrayType } from '@ngx-formly/core';
+import { GridOptions } from 'ag-grid-community';
+import { GridFormlyCellComponent } from './grid-formly-cell.component';
 
 @Component({
-  selector: "formly-field-grid",
+  selector: 'formly-field-grid',
   template: `
     <div [ngStyle]="style">
       <ag-grid-angular
@@ -13,14 +13,14 @@ import { GridFormlyCellComponent } from "./grid-formly-cell.component";
         class="className"
         [gridOptions]="gridOptions"
         [rowData]="model"
-        (firstDataRendered)="onFirstDataRendered($event)"
-      >
+        (firstDataRendered)="onFirstDataRendered($event)">
       </ag-grid-angular>
     </div>
-  `,
+`,
 })
+
 export class GridTypeComponent extends FieldArrayType implements OnInit {
-  @ViewChild("agGrid") agGrid: TemplateRef<any>;
+  @ViewChild('agGrid') agGrid: TemplateRef<any>;
 
   gridOptions: GridOptions;
   style: any = {};
@@ -32,9 +32,7 @@ export class GridTypeComponent extends FieldArrayType implements OnInit {
     };
 
     // map cell Renderer to Formly Component
-    this.to.gridOptions.columnDefs.forEach(
-      (column) => (column.cellRendererFramework = GridFormlyCellComponent)
-    );
+    this.to.gridOptions.columnDefs.forEach(column => column.cellRendererFramework = GridFormlyCellComponent);
 
     // set grid options and context of the parent formly field
     const gridOptions: GridOptions = this.to.gridOptions || {};
@@ -49,3 +47,9 @@ export class GridTypeComponent extends FieldArrayType implements OnInit {
     params.api.sizeColumnsToFit();
   }
 }
+
+
+
+/**  Copyright 2018 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license */
