@@ -11,8 +11,6 @@ export class AppComponent {
 
   form = new FormGroup({});
   model: any = {
-    name: "name1",
-    surname: "surname1",
     investments: [
       {
         investmentName: "project1",
@@ -65,34 +63,11 @@ export class AppComponent {
       template: "<h5>Personal data</h5>",
     },
     {
-      fieldGroupClassName: "row",
-      fieldGroup: [
-        {
-          key: "name",
-          type: "input",
-          className: "col-md-6",
-          templateOptions: {
-            label: "Name",
-            required: true,
-          },
-        },
-        {
-          key: "surname",
-          type: "input",
-          className: "col-md-6",
-          templateOptions: {
-            label: "Surname",
-            required: true,
-          },
-        },
-      ],
-    },
-    {
       key: "investments",
       type: "grid",
       className: "ag-theme-balham",
       templateOptions: {
-        height: "200px",
+        height: "370px",
         gridOptions: {
           rowHeight: 42,
           columnDefs: [
