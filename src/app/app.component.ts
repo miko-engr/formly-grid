@@ -44,6 +44,16 @@ export class AppComponent {
         investmentDate: "",
         stockIdentifier: 6,
       },
+      {
+        investmentName: "project7",
+        investmentDate: "",
+        stockIdentifier: 7,
+      },
+      {
+        investmentName: "project8",
+        investmentDate: "",
+        stockIdentifier: 8,
+      },
     ],
   };
 
