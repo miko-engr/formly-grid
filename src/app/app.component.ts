@@ -14,42 +14,42 @@ export class AppComponent {
     investments: [
       {
         investmentName: "project1",
-        investmentDate: "",
+        investmentDate: "2021-02-01",
         stockIdentifier: 1,
       },
       {
         investmentName: "project2",
-        investmentDate: "2004-06-20",
+        investmentDate: "2021-02-02",
         stockIdentifier: 2,
       },
       {
         investmentName: "project3",
-        investmentDate: "",
+        investmentDate: "2021-02-03",
         stockIdentifier: 3,
       },
       {
         investmentName: "project4",
-        investmentDate: "",
+        investmentDate: "2021-02-04",
         stockIdentifier: 4,
       },
       {
         investmentName: "project5",
-        investmentDate: "",
+        investmentDate: "2021-02-05",
         stockIdentifier: 5,
       },
       {
         investmentName: "project6",
-        investmentDate: "",
+        investmentDate: "2021-02-06",
         stockIdentifier: 6,
       },
       {
         investmentName: "project7",
-        investmentDate: "",
+        investmentDate: "2021-02-07",
         stockIdentifier: 7,
       },
       {
         investmentName: "project8",
-        investmentDate: "",
+        investmentDate: "2021-02-08",
         stockIdentifier: 8,
       },
     ],
